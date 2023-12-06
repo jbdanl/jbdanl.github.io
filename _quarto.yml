@@ -3,14 +3,18 @@ project:
   output-dir: "."
 
 website:
-  title: "YOUR NAME"
+  title: "Jackson Boyer"
   navbar:
+    background:
     pinned: true
     left:
       - text: Project
         href: project.qmd
       - text: Blog
         href: blog-listing.qmd
+      - text: Classwork
+        href: danl-200-cw-10.qmd # Quarto file for the classwork 10
+
   page-footer: 
     center: "Powered with GitHub and Quarto<br>© YOUR NAME, 2023"
 
