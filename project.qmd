@@ -2,7 +2,7 @@
 title: DANL Project
 subtitle: "Data-Driven Mastery: Unlocking Business Potential"
 author: 
-  - Name 1
+  - Jackson Boyer
   - Name 2
   - Name 3
   - Name 4
@@ -28,6 +28,8 @@ library(tidyverse)
 library(skimr)
 library(ggthemes)
 library(hrbrthemes)
+library(ggplot2)
+eq <- read_csv('/Users/jacksonboyer/Documents/Data Analytics/Project/jbdanl.github.io/earthquake data.csv')
 
 theme_set(theme_ipsum()+
           theme(strip.background =element_rect(fill="lightgray"),
@@ -47,28 +49,28 @@ theme_set(theme_ipsum()+
 
 # Introduction
 
-About this project :clap:
+ :clap:
 
 ```{r}
-1 + 1
+2 + 2
 ```
 
 
 # Data
 
-The data.frame `mpg` contains a subset of the fuel economy data that the EPA makes available on [https://fueleconomy.gov/](https://fueleconomy.gov/). It contains only models which had a new release every year between 1999 and 2008 - this was used as a proxy for the popularity of the car. :oncoming_automobile:
+The data.frame `eq` contains a subset of the fuel economy data that the EPA makes available on [https://fueleconomy.gov/](https://fueleconomy.gov/). It contains only models which had a new release every year between 1999 and 2008 - this was used as a proxy for the popularity of the car. :oncoming_automobile:
 
 
 ## Summary Statistics
 
 ```{r}
-mpg <- ggplot2::mpg
+eq <- ggplot2::eq
 ```
 
 ```{r}
 #| results: asis
 #| echo: false
-rmarkdown::paged_table(mpg) 
+rmarkdown::paged_table(eq) 
 ```
 
 

@@ -5,8 +5,10 @@ project:
 website:
   title: "Jackson Boyer"
   navbar:
-    background: `secondary`
     pinned: true
+    background: info
+    # primar, secondary, light, success, danger, warning, info
+
     left:
       - text: Project
         href: project.qmd

@@ -2,6 +2,7 @@
   {
     "listing": "/blog-listing.html",
     "items": [
+      "/posts/starwars 2/starwars_df.html",
       "/posts/beer-markets/beer-markets.html",
       "/posts/starwars/starwars_df.html",
       "/posts/post-with-code/index.html",
