@@ -5,7 +5,7 @@ project:
 website:
   title: "Jackson Boyer"
   navbar:
-    background:
+    background: `secondary`
     pinned: true
     left:
       - text: Project
@@ -16,7 +16,7 @@ website:
         href: danl-200-cw-10.qmd # Quarto file for the classwork 10
 
   page-footer: 
-    center: "Powered with GitHub and Quarto<br>© YOUR NAME, 2023"
+    center: "Powered with GitHub and Quarto<br>© Jackson Boyer, 2023"
 
 format:
   html:
