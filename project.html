@@ -7,10 +7,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Jackson Boyer">
-<meta name="author" content="Name 2">
-<meta name="author" content="Name 3">
-<meta name="author" content="Name 4">
-<meta name="author" content="Name 5">
+<meta name="author" content="Alban Kuka">
+<meta name="author" content="Henry Socash">
+<meta name="author" content="Jeremy Sun">
+<meta name="author" content="Tori Pavlock">
+<meta name="author" content="Chris DeLaCruz">
 
 <title>Jackson Boyer - DANL Project</title>
 <style>
@@ -132,10 +133,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="./blog-listing.html" rel="" target="">
  <span class="menu-text">Blog</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./danl-200-cw-10.qmd" rel="" target="">
- <span class="menu-text">Classwork</span></a>
-  </li>  
 </ul>
             <div class="quarto-navbar-tools ms-auto">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
@@ -179,10 +176,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div class="quarto-title-meta-heading">Authors</div>
     <div class="quarto-title-meta-contents">
              <p>Jackson Boyer </p>
-             <p>Name 2 </p>
-             <p>Name 3 </p>
-             <p>Name 4 </p>
-             <p>Name 5 </p>
+             <p>Alban Kuka </p>
+             <p>Henry Socash </p>
+             <p>Jeremy Sun </p>
+             <p>Tori Pavlock </p>
+             <p>Chris DeLaCruz </p>
           </div>
   </div>
     
@@ -220,7 +218,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">skim</span>(mpg) <span class="sc">%&gt;%</span> </span>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">skim</span>(eq) <span class="sc">%&gt;%</span> </span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>n_missing)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="table table-sm table-striped small">
@@ -228,15 +226,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Name</td>
-<td style="text-align: left;">mpg</td>
+<td style="text-align: left;">eq</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Number of rows</td>
-<td style="text-align: left;">234</td>
+<td style="text-align: left;">53539</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Number of columns</td>
-<td style="text-align: left;">11</td>
+<td style="text-align: left;">7</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">_______________________</td>
@@ -248,11 +246,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td style="text-align: left;">character</td>
-<td style="text-align: left;">6</td>
+<td style="text-align: left;">3</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">numeric</td>
-<td style="text-align: left;">5</td>
+<td style="text-align: left;">4</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">________________________</td>
@@ -279,57 +277,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">manufacturer</td>
+<td style="text-align: left;">Date &amp; Time</td>
 <td style="text-align: right;">1</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">10</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">16</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">15</td>
+<td style="text-align: right;">48909</td>
 <td style="text-align: right;">0</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">model</td>
+<td style="text-align: left;">Lands</td>
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">2</td>
-<td style="text-align: right;">22</td>
+<td style="text-align: right;">32</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">38</td>
-<td style="text-align: right;">0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">trans</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">0</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">drv</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">3</td>
+<td style="text-align: right;">722</td>
 <td style="text-align: right;">0</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">fl</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">0</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">class</td>
+<td style="text-align: left;">Country</td>
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">3</td>
-<td style="text-align: right;">10</td>
+<td style="text-align: right;">14</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">7</td>
+<td style="text-align: right;">187</td>
 <td style="text-align: right;">0</td>
 </tr>
 </tbody>
@@ -339,13 +310,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <colgroup>
 <col style="width: 17%">
 <col style="width: 17%">
-<col style="width: 10%">
-<col style="width: 6%">
 <col style="width: 8%">
+<col style="width: 7%">
+<col style="width: 9%">
 <col style="width: 8%">
+<col style="width: 7%">
+<col style="width: 7%">
 <col style="width: 8%">
-<col style="width: 8%">
-<col style="width: 6%">
 <col style="width: 7%">
 </colgroup>
 <thead>
@@ -364,64 +335,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">displ</td>
+<td style="text-align: left;">Latitude</td>
 <td style="text-align: right;">1</td>
-<td style="text-align: right;">3.47</td>
-<td style="text-align: right;">1.29</td>
-<td style="text-align: right;">1.6</td>
-<td style="text-align: right;">2.4</td>
-<td style="text-align: right;">3.3</td>
-<td style="text-align: right;">4.6</td>
-<td style="text-align: right;">7</td>
-<td style="text-align: left;">▇▆▆▃▁</td>
+<td style="text-align: right;">21.12</td>
+<td style="text-align: right;">25.65</td>
+<td style="text-align: right;">-65.90</td>
+<td style="text-align: right;">8.48</td>
+<td style="text-align: right;">29.32</td>
+<td style="text-align: right;">38.47</td>
+<td style="text-align: right;">85.33</td>
+<td style="text-align: left;">▁▂▅▇▁</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">year</td>
+<td style="text-align: left;">Longitude</td>
 <td style="text-align: right;">1</td>
-<td style="text-align: right;">2003.50</td>
-<td style="text-align: right;">4.51</td>
-<td style="text-align: right;">1999.0</td>
-<td style="text-align: right;">1999.0</td>
-<td style="text-align: right;">2003.5</td>
-<td style="text-align: right;">2008.0</td>
-<td style="text-align: right;">2008</td>
-<td style="text-align: left;">▇▁▁▁▇</td>
+<td style="text-align: right;">-15.42</td>
+<td style="text-align: right;">93.13</td>
+<td style="text-align: right;">-179.99</td>
+<td style="text-align: right;">-94.57</td>
+<td style="text-align: right;">-8.37</td>
+<td style="text-align: right;">37.46</td>
+<td style="text-align: right;">180.00</td>
+<td style="text-align: left;">▃▇▇▃▅</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">cyl</td>
+<td style="text-align: left;">Depth</td>
 <td style="text-align: right;">1</td>
-<td style="text-align: right;">5.89</td>
-<td style="text-align: right;">1.61</td>
-<td style="text-align: right;">4.0</td>
-<td style="text-align: right;">4.0</td>
-<td style="text-align: right;">6.0</td>
-<td style="text-align: right;">8.0</td>
-<td style="text-align: right;">8</td>
-<td style="text-align: left;">▇▁▇▁▇</td>
+<td style="text-align: right;">35.80</td>
+<td style="text-align: right;">67.58</td>
+<td style="text-align: right;">-4.00</td>
+<td style="text-align: right;">6.00</td>
+<td style="text-align: right;">10.00</td>
+<td style="text-align: right;">32.00</td>
+<td style="text-align: right;">750.00</td>
+<td style="text-align: left;">▇▁▁▁▁</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">cty</td>
+<td style="text-align: left;">Magnitude</td>
 <td style="text-align: right;">1</td>
-<td style="text-align: right;">16.86</td>
-<td style="text-align: right;">4.26</td>
-<td style="text-align: right;">9.0</td>
-<td style="text-align: right;">14.0</td>
-<td style="text-align: right;">17.0</td>
-<td style="text-align: right;">19.0</td>
-<td style="text-align: right;">35</td>
-<td style="text-align: left;">▆▇▃▁▁</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">hwy</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">23.44</td>
-<td style="text-align: right;">5.95</td>
-<td style="text-align: right;">12.0</td>
-<td style="text-align: right;">18.0</td>
-<td style="text-align: right;">24.0</td>
-<td style="text-align: right;">27.0</td>
-<td style="text-align: right;">44</td>
-<td style="text-align: left;">▅▅▇▁▁</td>
+<td style="text-align: right;">2.96</td>
+<td style="text-align: right;">0.89</td>
+<td style="text-align: right;">-0.70</td>
+<td style="text-align: right;">2.30</td>
+<td style="text-align: right;">2.90</td>
+<td style="text-align: right;">3.50</td>
+<td style="text-align: right;">7.70</td>
+<td style="text-align: left;">▁▆▇▁▁</td>
 </tr>
 </tbody>
 </table>

@@ -3,10 +3,11 @@ title: DANL Project
 subtitle: "Data-Driven Mastery: Unlocking Business Potential"
 author: 
   - Jackson Boyer
-  - Name 2
-  - Name 3
-  - Name 4
-  - Name 5
+  - Alban Kuka
+  - Henry Socash
+  - Jeremy Sun
+  - Tori Pavlock
+  - Chris DeLaCruz
 
 toc: true
 toc-title: "Table of Contents"
@@ -64,7 +65,7 @@ The data.frame `eq` contains a subset of the fuel economy data that the EPA make
 ## Summary Statistics
 
 ```{r}
-eq <- ggplot2::eq
+mpg <- ggplot2::mpg
 ```
 
 ```{r}
@@ -75,7 +76,7 @@ rmarkdown::paged_table(eq)
 
 
 ```{r}
-skim(mpg) %>% 
+skim(eq) %>% 
   select(-n_missing)
 ```
 

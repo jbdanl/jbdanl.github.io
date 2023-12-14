@@ -7,15 +7,14 @@ website:
   navbar:
     pinned: true
     background: info
-    # primar, secondary, light, success, danger, warning, info
+    # primary, secondary, light, success, danger, warning, info
 
     left:
       - text: Project
         href: project.qmd
       - text: Blog
         href: blog-listing.qmd
-      - text: Classwork
-        href: danl-200-cw-10.qmd # Quarto file for the classwork 10
+      
 
   page-footer: 
     center: "Powered with GitHub and Quarto<br>© Jackson Boyer, 2023"
