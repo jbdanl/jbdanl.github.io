@@ -4,7 +4,7 @@
     "href": "project.html",
     "title": "DANL Project",
     "section": "",
-    "text": "👏\n\n2 + 2\n\n[1] 4"
+    "text": "This is a data.frame about the earthquakes that occured in 2023. It provides information such as latitude, longitude, where it occured, etc.\n\neq &lt;- read_csv('/Users/jacksonboyer/Documents/Data Analytics/Project/jbdanl.github.io/earthquake data.csv')"
   },
   {
     "objectID": "project.html#summary-statistics",

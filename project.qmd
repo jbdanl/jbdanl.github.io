@@ -7,7 +7,6 @@ author:
   - Henry Socash
   - Jeremy Sun
   - Tori Pavlock
-  - Chris DeLaCruz
 
 toc: true
 toc-title: "Table of Contents"
@@ -50,10 +49,9 @@ theme_set(theme_ipsum()+
 
 # Introduction
 
- :clap:
-
+This is a data.frame about the earthquakes that occured in 2023. It provides information such as latitude, longitude, where it occured, etc. 
 ```{r}
-2 + 2
+eq <- read_csv('/Users/jacksonboyer/Documents/Data Analytics/Project/jbdanl.github.io/earthquake data.csv')
 ```
 
 
