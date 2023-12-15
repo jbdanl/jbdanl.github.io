@@ -29,7 +29,7 @@ library(skimr)
 library(ggthemes)
 library(hrbrthemes)
 library(ggplot2)
-eq <- read_csv('/Users/jacksonboyer/Documents/Data Analytics/Project/jbdanl.github.io/earthquake data.csv')
+
 
 theme_set(theme_ipsum()+
           theme(strip.background =element_rect(fill="lightgray"),
@@ -49,7 +49,7 @@ theme_set(theme_ipsum()+
 
 # Introduction
 
-This is a data.frame about the earthquakes that occured in 2023. It provides information such as latitude, longitude, where it occured, etc. 
+This is a data.frame about the earthquakes that occurred in 2023. It provides information such as latitude, longitude, where it occurred, etc. 
 ```{r}
 eq <- read_csv('/Users/jacksonboyer/Documents/Data Analytics/Project/jbdanl.github.io/earthquake data.csv')
 ```
@@ -57,7 +57,7 @@ eq <- read_csv('/Users/jacksonboyer/Documents/Data Analytics/Project/jbdanl.gith
 
 # Data
 
-The data.frame `eq` contains a subset of the fuel economy data that the EPA makes available on [https://fueleconomy.gov/](https://fueleconomy.gov/). It contains only models which had a new release every year between 1999 and 2008 - this was used as a proxy for the popularity of the car. :oncoming_automobile:
+The data.frame `eq` contains data about any earthquakes that have occurred from September 1st, 2023 to October 1st, 2023. It contains data from all around the world.  
 
 
 ## Summary Statistics
@@ -80,7 +80,7 @@ skim(eq) %>%
 
 
 ## MPG and a Type of Cars
-The following boxplot shows how the distribution of highway MPG (`hwy`) varies by a type of cars (`class`) :blue_car: :truck: :minibus:.
+.
 
 
 ```{r}
@@ -89,5 +89,6 @@ ggplot(data = mpg) +
                show.legend = F) +
   labs(x = "Class", y = "Highway\nMPG") 
 ```
+
 
 
