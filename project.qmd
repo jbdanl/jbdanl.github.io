@@ -65,13 +65,13 @@ The data.frame `eq` contains a subset of the fuel economy data that the EPA make
 ## Summary Statistics
 
 ```{r}
-mpg <- ggplot2::mpg
+rmarkdown::paged_table(eq) 
 ```
 
 ```{r}
 #| results: asis
 #| echo: false
-rmarkdown::paged_table(eq) 
+ 
 ```
 
 
