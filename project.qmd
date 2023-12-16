@@ -54,10 +54,28 @@ This is a data.frame about the earthquakes that occurred in 2023. It provides in
 eq <- read_csv('/Users/jacksonboyer/Documents/Data Analytics/Project/jbdanl.github.io/earthquake data.csv')
 ```
 
+```{r}
+#| include: false
+# the month with the most earthquakes occurring 
+eq$Month <- rowSums(eq[,4:5])
+eq$Month[1:6055] <- "NOVEMBER"
+eq$Month[6056:14543] <- "OCTOBER"
+eq$Month[14544:23404] <- "SEPTEMBER"
+eq$Month[23405:31631] <- "AUGUST"
+eq$Month[31632:40673] <- "JULY"
+eq$Month[40674:48647] <- "JUNE"
+eq$Month[48648:53539] <- "MAY"
+
+densemonth <- eq %>% 
+  group_by(Month) %>% 
+  summarize(count =n()) %>% 
+  arrange(desc(count)) %>% 
+  filter(row_number() <=7)
+```
 
 # Data
 
-The data.frame `eq` contains data about any earthquakes that have occurred from September 1st, 2023 to October 1st, 2023. It contains data from all around the world.  
+The data.frame `eq` contains data about any earthquakes that have occurred during 2023. It contains data from all around the world.  
 
 
 ## Summary Statistics
@@ -78,17 +96,138 @@ skim(eq) %>%
   select(-n_missing)
 ```
 
+```{r}
+#| include: false
+summagnitude <- eq %>% 
+  summarize(
+    mean_magnitude = mean(Magnitude, na.rm = T), 
+    sd_magnitude = sd(Magnitude),
+    q1_magnitude = quantile(Magnitude, probs = .25, na.rm = T),
+    median_magnitude = median(Magnitude),
+    q3_magnitude = quantile(Magnitude, probs = .75, na.rm =  T),
+    min_magnitude = min(Magnitude, na.rm = T),
+    max_magnitude = max(Magnitude, na.rm = T)
+  )
+```
+```{r}
+skim(eq$Magnitude)
+skim(eq$Depth)
+```
 
-## MPG and a Type of Cars
-.
-
+## Top 10 countries with the most earthquakes
+Below is a list of the top 10 countries that had the most earthquakes during the data collection period. There is also charts with each country corresponding to each month showing the number of earthquakes.
 
 ```{r}
-ggplot(data = mpg) +
-  geom_boxplot(aes(x = class, y = hwy, fill = class),
-               show.legend = F) +
-  labs(x = "Class", y = "Highway\nMPG") 
+#| include: false
+top_10_quaked <- eq %>% 
+  group_by(Country , Lands) %>% 
+  summarize(count =n()) %>% 
+  arrange(desc(count)) %>% 
+  filter(row_number() <=10) %>% 
+  head(quaked, n = 10) 
+```
+
+```{r}
+rmarkdown::paged_table(top_10_quaked) 
+```
+
+```{r}
+#| include: false
+dense <- eq %>% 
+  group_by(Month,Country,Lands) %>% 
+  summarize(count =n()) %>% 
+  arrange(desc(count)) %>% 
+  filter(row_number() <=7) %>% 
+  head(dense, n=15)
+```
+```{r}
+ggplot(dense) +
+  geom_bar(aes(y = Country, x = stat(count),
+               group = 1)) +
+  facet_wrap(Month ~ . , ncol = 5)
 ```
 
 
+## Months with the most earthquakes
+Below is a list of months and the corresponding number of earthquakes during that month, July being the month with the most earthquakes and May being the month with the least. The graph shows the relationship between earthquakes in each country and months earthquakes occurred in.
 
+```{r}
+rmarkdown::paged_table(densemonth) 
+```
+```{r}
+ggplot(dense,
+       aes(y = Month,
+           fill = Country)) +
+  geom_bar(show.legend = T)
+```
+
+
+## Magnitude Graphs
+Below are some graphs showing the magnitude of earthquakes. 
+```{r}
+ggplot(eq, aes(x = log(Magnitude))) +
+  geom_freqpoly(bins = 100)
+
+ggplot(eq, aes(x = Magnitude)) +
+  geom_freqpoly(bins = 100)
+```
+
+
+## Depth Graphs
+Below are some graphs showing the depth of earthquakes. 
+```{r}
+ggplot(eq, aes(x = log(Depth))) +
+  geom_histogram(bins = 50)
+
+ggplot(eq, aes(x = Depth)) +
+  geom_histogram(bins = 50)
+```
+
+
+## Magnitude Histograms
+Below are histogram charts showing the magnitude of each earthquake per month.
+```{r}
+ggplot(eq, aes(x = Magnitude)) +
+  geom_histogram(binwidth = 0.5, fill = "blue", color = "black", alpha = 0.7) +
+  facet_wrap(~Month, scales = "free_y") +
+  labs(title = "Histogram of Magnitude by Month", x = "Magnitude", y = "Count")
+```
+
+
+## Relationship Graph
+Beloq is a graph showing the relationship between the magnitude of an earthquake and the depth it occurs at.
+```{r}
+ggplot(eq,
+       aes(x = Magnitude, y = Depth)) +
+  geom_point(alpha = .2, size = .75) +
+  geom_smooth() +
+  geom_smooth(method = lm, color = 'red')
+```
+
+
+## Earthquakes per Season
+Below is a table showing the different seasons and how many earthquakes occur during that season, a graph is shown to visualize the data.
+```{r}
+#| include: false
+eq$Season <- rowSums(eq[,4:5])
+eq$Season[48648:53539] <- "SPRING"
+eq$Season[23405:48647] <- "SUMMER"
+eq$Season[1:23404] <- "FALL"
+
+
+# which season is more earthquake prone 
+denseseason <- eq %>% 
+  group_by(Season) %>% 
+  summarize(count =n()) %>% 
+  arrange(desc(count)) %>% 
+  filter(row_number() <=3)
+```
+```{r}
+rmarkdown::paged_table(denseseason) 
+
+
+ggplot(eq) +
+  geom_bar(aes(x = Month, y = stat(count),
+               group = 1)) +
+  facet_wrap(Season ~ . , ncol = 5)
+```

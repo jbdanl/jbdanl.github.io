@@ -11,7 +11,7 @@
     "href": "project.html#summary-statistics",
     "title": "DANL Project",
     "section": "2.1 Summary Statistics",
-    "text": "2.1 Summary Statistics\n\nrmarkdown::paged_table(eq) \n\n\n\n  \n\n\n\n\nskim(eq) %&gt;% \n  select(-n_missing)\n\n\nData summary\n\n\nName\neq\n\n\nNumber of rows\n53539\n\n\nNumber of columns\n7\n\n\n_______________________\n\n\n\nColumn type frequency:\n\n\n\ncharacter\n3\n\n\nnumeric\n4\n\n\n________________________\n\n\n\nGroup variables\nNone\n\n\n\nVariable type: character\n\n\n\nskim_variable\ncomplete_rate\nmin\nmax\nempty\nn_unique\nwhitespace\n\n\n\n\nDate & Time\n1\n13\n16\n0\n48909\n0\n\n\nLands\n1\n2\n32\n0\n722\n0\n\n\nCountry\n1\n3\n14\n0\n187\n0\n\n\n\nVariable type: numeric\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nskim_variable\ncomplete_rate\nmean\nsd\np0\np25\np50\np75\np100\nhist\n\n\n\n\nLatitude\n1\n21.12\n25.65\n-65.90\n8.48\n29.32\n38.47\n85.33\n▁▂▅▇▁\n\n\nLongitude\n1\n-15.42\n93.13\n-179.99\n-94.57\n-8.37\n37.46\n180.00\n▃▇▇▃▅\n\n\nDepth\n1\n35.80\n67.58\n-4.00\n6.00\n10.00\n32.00\n750.00\n▇▁▁▁▁\n\n\nMagnitude\n1\n2.96\n0.89\n-0.70\n2.30\n2.90\n3.50\n7.70\n▁▆▇▁▁"
+    "text": "2.1 Summary Statistics\n\nrmarkdown::paged_table(eq) \n\n\n\n  \n\n\n\n\nskim(eq) %&gt;% \n  select(-n_missing)\n\n\nData summary\n\n\nName\neq\n\n\nNumber of rows\n53539\n\n\nNumber of columns\n8\n\n\n_______________________\n\n\n\nColumn type frequency:\n\n\n\ncharacter\n4\n\n\nnumeric\n4\n\n\n________________________\n\n\n\nGroup variables\nNone\n\n\n\nVariable type: character\n\n\n\nskim_variable\ncomplete_rate\nmin\nmax\nempty\nn_unique\nwhitespace\n\n\n\n\nDate & Time\n1\n13\n16\n0\n48909\n0\n\n\nLands\n1\n2\n32\n0\n722\n0\n\n\nCountry\n1\n3\n14\n0\n187\n0\n\n\nMonth\n1\n3\n9\n0\n7\n0\n\n\n\nVariable type: numeric\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nskim_variable\ncomplete_rate\nmean\nsd\np0\np25\np50\np75\np100\nhist\n\n\n\n\nLatitude\n1\n21.12\n25.65\n-65.90\n8.48\n29.32\n38.47\n85.33\n▁▂▅▇▁\n\n\nLongitude\n1\n-15.42\n93.13\n-179.99\n-94.57\n-8.37\n37.46\n180.00\n▃▇▇▃▅\n\n\nDepth\n1\n35.80\n67.58\n-4.00\n6.00\n10.00\n32.00\n750.00\n▇▁▁▁▁\n\n\nMagnitude\n1\n2.96\n0.89\n-0.70\n2.30\n2.90\n3.50\n7.70\n▁▆▇▁▁\n\n\n\n\n\n\nskim(eq$Magnitude)\n\n\nData summary\n\n\nName\neq$Magnitude\n\n\nNumber of rows\n53539\n\n\nNumber of columns\n1\n\n\n_______________________\n\n\n\nColumn type frequency:\n\n\n\nnumeric\n1\n\n\n________________________\n\n\n\nGroup variables\nNone\n\n\n\nVariable type: numeric\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nskim_variable\nn_missing\ncomplete_rate\nmean\nsd\np0\np25\np50\np75\np100\nhist\n\n\n\n\ndata\n0\n1\n2.96\n0.89\n-0.7\n2.3\n2.9\n3.5\n7.7\n▁▆▇▁▁\n\n\n\n\nskim(eq$Depth)\n\n\nData summary\n\n\nName\neq$Depth\n\n\nNumber of rows\n53539\n\n\nNumber of columns\n1\n\n\n_______________________\n\n\n\nColumn type frequency:\n\n\n\nnumeric\n1\n\n\n________________________\n\n\n\nGroup variables\nNone\n\n\n\nVariable type: numeric\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nskim_variable\nn_missing\ncomplete_rate\nmean\nsd\np0\np25\np50\np75\np100\nhist\n\n\n\n\ndata\n0\n1\n35.8\n67.58\n-4\n6\n10\n32\n750\n▇▁▁▁▁"
   },
   {
     "objectID": "project.html#mpg-and-a-type-of-cars",
@@ -138,5 +138,61 @@
     "title": "DANL Project",
     "section": "2.3 f",
     "text": "2.3 f"
+  },
+  {
+    "objectID": "project.html#top-10-countries-with-the-most-earthquakes",
+    "href": "project.html#top-10-countries-with-the-most-earthquakes",
+    "title": "DANL Project",
+    "section": "2.2 Top 10 countries with the most earthquakes",
+    "text": "2.2 Top 10 countries with the most earthquakes\nBelow is a list of the top 10 countries that had the most earthquakes during the data collection period. There is also charts with each country corresponding to each month showing the number of earthquakes.\n\nrmarkdown::paged_table(top_10_quaked) \n\n\n\n  \n\n\n\n\nggplot(dense) +\n  geom_bar(aes(y = Country, x = stat(count),\n               group = 1)) +\n  facet_wrap(Month ~ . , ncol = 5)"
+  },
+  {
+    "objectID": "project.html#months-with-the-most-earthquakes",
+    "href": "project.html#months-with-the-most-earthquakes",
+    "title": "DANL Project",
+    "section": "2.3 Months with the most earthquakes",
+    "text": "2.3 Months with the most earthquakes\nBelow is a list of months and the corresponding number of earthquakes during that month, July being the month with the most earthquakes and May being the month with the least. The graph shows the relationship between earthquakes in each country and months earthquakes occurred in.\n\nrmarkdown::paged_table(densemonth) \n\n\n\n  \n\n\n\n\nggplot(dense,\n       aes(y = Month,\n           fill = Country)) +\n  geom_bar(show.legend = T)"
+  },
+  {
+    "objectID": "project.html#section",
+    "href": "project.html#section",
+    "title": "DANL Project",
+    "section": "2.8 …",
+    "text": "2.8 …\n\nrmarkdown::paged_table(denseseason) \n\n\n\n  \n\n\nggplot(eq) +\n  geom_bar(aes(x = Month, y = stat(count),\n               group = 1)) +\n  facet_wrap(Season ~ . , ncol = 5)"
+  },
+  {
+    "objectID": "project.html#magnitude-graphs",
+    "href": "project.html#magnitude-graphs",
+    "title": "DANL Project",
+    "section": "2.4 Magnitude Graphs",
+    "text": "2.4 Magnitude Graphs\nBelow are some graphs showing the magnitude of earthquakes.\n\nggplot(eq, aes(x = log(Magnitude))) +\n  geom_freqpoly(bins = 100)\n\n\n\nggplot(eq, aes(x = Magnitude)) +\n  geom_freqpoly(bins = 100)"
+  },
+  {
+    "objectID": "project.html#depth-graphs",
+    "href": "project.html#depth-graphs",
+    "title": "DANL Project",
+    "section": "2.5 Depth Graphs",
+    "text": "2.5 Depth Graphs\nBelow are some graphs showing the depth of earthquakes.\n\nggplot(eq, aes(x = log(Depth))) +\n  geom_histogram(bins = 50)\n\n\n\nggplot(eq, aes(x = Depth)) +\n  geom_histogram(bins = 50)"
+  },
+  {
+    "objectID": "project.html#magnitude-histograms",
+    "href": "project.html#magnitude-histograms",
+    "title": "DANL Project",
+    "section": "2.6 Magnitude Histograms",
+    "text": "2.6 Magnitude Histograms\nBelow are histogram charts showing the magnitude of each earthquake per month.\n\nggplot(eq, aes(x = Magnitude)) +\n  geom_histogram(binwidth = 0.5, fill = \"blue\", color = \"black\", alpha = 0.7) +\n  facet_wrap(~Month, scales = \"free_y\") +\n  labs(title = \"Histogram of Magnitude by Month\", x = \"Magnitude\", y = \"Count\")"
+  },
+  {
+    "objectID": "project.html#relationship-graph",
+    "href": "project.html#relationship-graph",
+    "title": "DANL Project",
+    "section": "2.7 Relationship Graph",
+    "text": "2.7 Relationship Graph\nBeloq is a graph showing the relationship between the magnitude of an earthquake and the depth it occurs at.\n\nggplot(eq,\n       aes(x = Magnitude, y = Depth)) +\n  geom_point(alpha = .2, size = .75) +\n  geom_smooth() +\n  geom_smooth(method = lm, color = 'red')"
+  },
+  {
+    "objectID": "project.html#earthquakes-per-season",
+    "href": "project.html#earthquakes-per-season",
+    "title": "DANL Project",
+    "section": "2.8 Earthquakes per Season",
+    "text": "2.8 Earthquakes per Season\nBelow is a table showing the different seasons and how many earthquakes occur during that season, a graph is shown to visualize the data.\n\nrmarkdown::paged_table(denseseason) \n\n\n\n  \n\n\nggplot(eq) +\n  geom_bar(aes(x = Month, y = stat(count),\n               group = 1)) +\n  facet_wrap(Season ~ . , ncol = 5)"
   }
 ]
